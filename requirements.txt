@@ -1,0 +1,10 @@
+fastapi[standard] == 0.115.0
+fastapi == 0.115.0
+
+langchain == 0.1.20
+langchain-community
+langchain-core == 0.1.52
+langchain-openai
+openai == 1.10.0
+pydantic == 2.9.2
+ttldict == 0.3.0
