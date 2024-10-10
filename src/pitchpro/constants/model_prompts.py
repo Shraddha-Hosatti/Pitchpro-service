@@ -92,7 +92,19 @@ def get_info(content, profile):
     * Mention relevant course components, case studies, or projects that are aligned with their industry or job role (e.g., sales-related data science projects in DS program, sales-related case studies in MBA).
     """
 
-    info = f"""This are the course details:\n {content} \n The learner profile is as follows: {profile} \n General instructions: {instructions} \n"""
+    input_learner_profile = f"""{profile}"""+ """
+    The description for parameters in the above profile are as follows,
+      {
+        "interest_domain": ("Identifies the specific field or domain the learner is interested in.", "Helps in recommending courses and programs that align with the learner's interests and career aspirations."),
+        "job_profile": ("Indicates whether the learner is in a tech or non-tech role.", "Assists in tailoring course recommendations based on the learner's current technical exposure and needs."),
+        "industry": ("May or may not be given", "Specifies the industry in which the learner is currently employed.", "Provides context for industry-specific skills and knowledge that may be relevant for the learner."),
+        "job_domain": ("Details the specific job domain within the learner's company.", "Helps in identifying relevant skills and courses that are specific to the learner's job function."),
+        "work_exp": ("Indicates the number of years of professional experience", "Has 5 possible values: '0-2', '3-5', '6-8', '9-12', '12+'"),
+        "motivation": ("The reason for the learner to pursue a program. Take 'transition)
+      }
+    """
+
+    info = f"""This are the course details:\n {content} \n The learner profile is as follows: {input_learner_profile} \n General instructions: {instructions} \n"""
 
     # Topics
     topic_prompt = f""" {info}
