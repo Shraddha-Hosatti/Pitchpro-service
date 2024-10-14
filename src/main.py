@@ -37,5 +37,5 @@ def get_chatbot_response(chatbot_request: ChatbotRequest):
     return make_chatbot_response(chatbot_request.user_id, chatbot_request.question, models[chatbot_request.course_name])
 
 @app.post("/clear_chat")
-def clear_chat(chatbotClearChatRequest: ChatbotClearChatRequest):
-    clear_chat_history(memory, chatbotClearChatRequest.user_id)
+def clear_chat(chatbot_clear_chat_response: ChatbotClearChatRequest):
+    clear_chat_history(memory, chatbot_clear_chat_response.user_id)

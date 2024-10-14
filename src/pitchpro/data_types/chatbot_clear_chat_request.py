@@ -1,4 +1,4 @@
 from pydantic import BaseModel
 
-class ChatbotClearChatRequest:
+class ChatbotClearChatRequest(BaseModel):
     user_id: str
